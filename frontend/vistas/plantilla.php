@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!--=====================================
+	PLUGINS DE CSS
+	======================================-->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="vistas/css/plugins/font-awesome.min.css">
+
+	<link rel="stylesheet" href="vistas/css/plugins/flexslider.css">
+
+	<link rel="stylesheet" href="vistas/css/plugins/sweetalert.css">
+
+	<link rel="stylesheet" href="vistas/css/plugins/dscountdown.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed" rel="stylesheet">
+
+	<!--=====================================
+	HOJAS DE ESTILO PERSONALIZADAS
+	======================================-->
+
+
+	<!--=====================================
+	PLUGINS DE JAVASCRIPT
+	======================================-->
+
+	<script src="vistas/js/plugins/jquery.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+	<script src="vistas/js/plugins/jquery.easing.js"></script>
+
+	<script src="vistas/js/plugins/jquery.scrollUp.js"></script>
+
+	<script src="vistas/js/plugins/jquery.flexslider.js"></script>
+
+	<script src="vistas/js/plugins/sweetalert.min.js"></script>
+
+	<script src="vistas/js/plugins/md5-min.js"></script>
+
+	<script src="vistas/js/plugins/dscountdown.min.js"></script>
+
+	<script src="vistas/js/plugins/knob.jquery.js"></script>
+
+</head>
+
+<body>
+
+<?php
+
+/*=============================================
+CABEZOTE
+=============================================*/
+
+include "modulos/cabezote.php";
+
+
+	/*=============================================
+	LISTA BLANCA DE URL'S AMIGABLES
+	=============================================*/
+
+		include "modulos/slide.php";
+
+		include "modulos/destacados.php";
+
+		include "modulos/footer.php";
+
+?>
+
+
+<input type="hidden" value="" id="rutaOculta">
+<!--=====================================
+JAVASCRIPT PERSONALIZADO
+======================================-->
+
+</body>
+</html>
