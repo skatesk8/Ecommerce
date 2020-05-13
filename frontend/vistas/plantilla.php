@@ -28,7 +28,7 @@
 	HOJAS DE ESTILO PERSONALIZADAS
 	======================================-->
 
-	<link rel="stylesheet" type="text/css" href="vistas/css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="vistas/css/banner.css">
 
 	<!--=====================================
 	PLUGINS DE JAVASCRIPT
