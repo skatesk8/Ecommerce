@@ -1,7 +1,14 @@
 <!--=====================================
 BANNER
 ======================================-->
- <h1>Banner</h1>
+<figure class="snip0015">
+	<img src="vistas/img/banner/default.jpg" alt="sample38"/>
+	<figcaption>
+		<h2> <span> OFERTAS ESPECIALES</span> 50% off</h2>
+		<p>Termina el 31 de Octubre!</p>
+		<a href="#"></a>
+	</figcaption>			
+</figure>
 
 <!--=====================================
 BARRA PRODUCTOS GRATIS

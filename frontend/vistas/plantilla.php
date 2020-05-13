@@ -28,6 +28,7 @@
 	HOJAS DE ESTILO PERSONALIZADAS
 	======================================-->
 
+	<link rel="stylesheet" type="text/css" href="vistas/css/estilo.css">
 
 	<!--=====================================
 	PLUGINS DE JAVASCRIPT
