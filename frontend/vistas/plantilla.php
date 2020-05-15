@@ -12,6 +12,13 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+	<!--ESTILO DEL BOTON LIST GRID VIEW-->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <!--IMAGEN ZOOM-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/zoom.css">
+
 	<link rel="stylesheet" href="vistas/css/plugins/font-awesome.min.css">
 
 	<link rel="stylesheet" href="vistas/css/plugins/flexslider.css">
