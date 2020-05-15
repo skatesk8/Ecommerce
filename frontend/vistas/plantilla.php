@@ -29,6 +29,8 @@
 	======================================-->
 
 	<link rel="stylesheet" type="text/css" href="vistas/css/banner.css">
+	<link rel="stylesheet" type="text/css" href="vistas/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="vistas/css/zoom.css">
 
 	<!--=====================================
 	PLUGINS DE JAVASCRIPT
