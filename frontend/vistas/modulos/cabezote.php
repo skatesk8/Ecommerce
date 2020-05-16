@@ -1,5 +1,5 @@
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark gris scrolling-navbar fixed-top">
+    <nav class="navbar navbar-expand-lg  scrolling-navbar fixed-top navbar navbar-dark bg-dark">
 
       <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,13 @@
           </ul>
 </---------------------------------------INGRESAR ----------------------------------------------------------------------------------------->
           <ul class="navbar-nav nav-flex-icons">
-          <button type="button" name="login" class="btn btn-warning" data-toggle="modal" data-target="#loginModal">Ingresar</button>  
+            
+                <div align="center"> 
+          <button type="button" name="login" class="btn btn-warning" data-toggle="modal" data-target="#loginModal">Ingresar</button> 
+          </div> 
+          </div>
+
+
           <div id="loginModal" class="modal fade" role="dialog">  
       <div class="modal-dialog">  
    <!-- Modal content-->  
@@ -93,6 +99,7 @@
   </div>
 </div>
 </---------------------------------------REGISTRAR ----------------------------------------------------------------------------------------->
+</ul>
       </nav>
 
       <section class="fondo">
