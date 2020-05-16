@@ -1,6 +1,5 @@
-.fondo{
+  .fondo{
     height: 100vh;
-    
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -10,7 +9,6 @@
   .top-nav-collapse{
     background: rgba(0, 0, 0, 0.774) !important;
   }
-
 /*============================= NAVBAR =============================
 =================================*/
 
