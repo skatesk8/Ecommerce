@@ -214,9 +214,22 @@ SECCIÓN PERFIL
 			======================================-->
 	 			<!--EDITAR PERFIL-->
 				 <div class="tab-pane fade" id="nav-editar" role="tabpanel" aria-labelledby="contact-tab">
+	 				<div class=" col-md-auto ">
+							 <br> 
+							 <!--imagen-->
+							<img src="vistas/img/usuarios/40/944.jpg" class="rounded float-left" alt="usuario">
+							<br> <br>
+							<!--button de cambiar imagen-->
+						<button type="button" class="btn btn-light float-left">Cambiar foto de perfil</button>
 
-					<img src="..." class="rounded float-left" alt="...">
+						<div class="input-group mb-3 float-right">
+  							<div class="input-group-prepend">
+    							<span class="input-group-text" id="basic-addon1"><i class="fav fa-user"></i> </span>
+  							</div>
+  								<input type="text" class="form-control mb-3" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+						</div>
 
+					</div>
 
 				</div>
 		 
