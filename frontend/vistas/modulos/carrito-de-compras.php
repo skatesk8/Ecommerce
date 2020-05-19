@@ -1,27 +1,14 @@
 <!--BOOTSTRAP-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="estiloLucia.css">
-
-    <!--FONT-->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vistas/css/carrito.css">
 
     <!--JS-->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-		crossorigin="anonymous"></script>
-		
+    
 <!--=====================================
 TABLA CARRITO DE COMPRAS
 ======================================-->
@@ -40,7 +27,86 @@ TABLA CARRITO DE COMPRAS
 			CUERPO CARRITO DE COMPRAS
 			======================================-->
 
-				<!-- item1 -->
+                 
+        <div id="loginbox" style="margin-top:20px;" class="mainbox col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2">
+            <!--_________________CARD______________-->
+            <div class="card text-center center-block">
+                <div class="card-header">Carrito de Compras</div>
+                <!--_________________Cuerpa :V______________-->
+                <div class="card-body mb-3">
+                    <!--_________________Tabla______________-->
+                    <table class="table">
+                        <thead>
+                            <TR>
+                                <th scope="col">Eliminar </th>
+                                <th scope="col">Imagen </th>
+                                <th scope="col">PRODUCTO</th>
+                                <th scope="col">PRECIO</th>
+                                <th scope="col">CANTIDAD</th>
+                                <th scope="col">SUBTOTAL</th>
+                            </TR>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!--________________Boton de eliminar______________-->
+                                <td><button class="btn btn-warning glyphicon glyphicon-remove"></button></td>
+                                <!--________________Imagen______________-->
+                                <td><img width="100px" heigth="50px" src="z.png"></td>
+                                <!--________________Nombre del producto_____________-->
+                                <td>Zapatos Chingones</td>
+                                <!--_________________Precio______________-->
+                                <td>150</td>
+                                <!--_________________Cantidad______________-->
+                                <td>
+                                    <input type="number" value="1" min="1" max="100" class="form-control"/>
+                                </td>
+                                <!--_________________Subtotal______________-->
+                                <td>150</td>
+                            </tr>
+                            <tr>
+                                <!--________________Boton de eliminar______________-->
+                                <td><button class="btn btn-warning glyphicon glyphicon-remove"></button></td>
+                                <!--________________Imagen______________-->
+                                <td><img width="100px" heigth="50px" src="vistas/img/plantilla/z.png"></td>
+                                <!--________________Nombre del producto_____________-->
+                                <td>Zapatos Chingones</td>
+                                <!--_________________Precio______________-->
+                                <td>150</td>
+                                <!--_________________Cantidad______________-->
+                                <td>
+                                    <input type="number" value="1" min="1" max="100" class="form-control"/>
+                                </td>
+                                <!--_________________Subtotal______________-->
+                                <td>150</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--_________________TABLA DE TOTAL ______________-->
+                    <table class="table table-hover w-25 float-right">
+                        <thead class="text-right">
+                            <tr>
+                                <th>Total</th>
+                                <th>150</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <br><br></br>
+
+
+                </div>
+                <div class="card-footer text-muted">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning btn-xl js-scroll-trigger" data-toggle="modal"
+                        data-target="#exampleModalLong">
+                        REALIZAR PAGO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 				
 
 			<!--=====================================
@@ -52,10 +118,7 @@ TABLA CARRITO DE COMPRAS
 			BOTÓN CHECKOUT
 			======================================-->
 			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-warning btn-xl js-scroll-trigger" data-toggle="modal"
-        data-target="#exampleModalLong">
-        REALIZAR PAGO
-    </button>
+			
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
@@ -86,8 +149,8 @@ TABLA CARRITO DE COMPRAS
                         </div>
                         <!--_________________Imagenes______________-->
                         <div class="d-flex justify-content-center">
-                            <img src="ima2.png" class="rounded float-left w-50 col-md-4" alt="...">
-                            <img src="ima1.png" class="rounded float-right w-50 col-md-4" alt="...">
+                            <img src="vistas/img/plantilla/paypal.png" class="rounded float-left w-50 col-md-4" alt="...">
+                            <img src="vistas/img/plantilla/ima1.png" class="rounded float-right w-50 col-md-4" alt="...">
                         </div>
                         <!--_________________Titulo elejir la forma de pago ______________-->
                         <br>
@@ -155,9 +218,5 @@ TABLA CARRITO DE COMPRAS
                 </div>
             </div>
         </div>
-    </div>
-
-
 	</div>
-
 </div>
