@@ -1,7 +1,14 @@
 <!--=====================================
 SLIDESHOW  
 ======================================-->
+<br>
+<br>
 
+<img src="vistas/img/logo.png" alt="foto" class="col-sm-4 col-md-5 col-lg-2">
+
+<br>
+<br>
+<br>
 <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
             <div class="carousel-item active">
