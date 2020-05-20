@@ -67,7 +67,7 @@ TABLA CARRITO DE COMPRAS
                                 <!--________________Boton de eliminar______________-->
                                 <td><button class="btn btn-warning glyphicon glyphicon-remove"></button></td>
                                 <!--________________Imagen______________-->
-                                <td><img width="100px" heigth="50px" src="vistas/img/plantilla/z.png"></td>
+                                <td><img width="100px" heigth="50px" src="vistas/img/productos/accesorios/calzado05.jpg"></td>
                                 <!--________________Nombre del producto_____________-->
                                 <td>Zapatos Chingones</td>
                                 <!--_________________Precio______________-->
