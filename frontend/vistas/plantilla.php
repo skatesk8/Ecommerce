@@ -18,7 +18,7 @@
     <!--IMAGEN ZOOM-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <link rel="stylesheet" href="css/zoom.css">
-
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 
 	<link rel="stylesheet" href="vistas/css/plugins/font-awesome.min.css">
@@ -46,7 +46,8 @@
 	<link rel="stylesheet" type="text/css" href="vistas/css/zoom.css">
 	<link rel="stylesheet" type="text/css" href="vistas/css/cabezote.css">
 	<link rel="stylesheet" type="text/css" href="vistas/css/footer.css">
-
+	<link rel="stylesheet" href="vistas/css/bootstrap.css"/>  
+       
 	<!--=====================================
 	PLUGINS DE JAVASCRIPT
 	======================================-->
@@ -89,7 +90,8 @@
     <script>
        //$('.carousel').carousel();
     </script>  
-      
+          <script src="vistas/js/bootstrap.js"></script>  
+		  <script src="vistas/js/jquery.js"></script> 
 
 </head>
 
