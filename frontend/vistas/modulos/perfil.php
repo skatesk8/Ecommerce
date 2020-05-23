@@ -65,20 +65,25 @@ SECCIÓN PERFIL
 			            PESTAÑA DE MIS COMPRAS
 			        ======================================-->
 					<div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                         <br> 
-
-                         <div class="card mt-2">
+                        <br> 
+                        <div class="card mt-2">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <img class="img-fluid" src="C:/Users/Lucia/Desktop/imagenes/KATYA2.jpg" alt="">
+									
+                                    <img class="img-fluid" src="vistas/modulos/img/productos/accesorios/accesorios01.jpg" alt="">
                                 </div>
                                 <div class="col-md-8">
                                     <h2 class="card-title mt-3 text-uppercase">UNDERGROUD</h2>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima assumenda nemo, autem fuga non, ullam recusandae earum nesciunt omnis vitae quod molestias id accusamus nobis dolor dolorum. Quas, error et!</p>
-                                    <button class="btn btn-outline-secondary "> VER EL LIBRO</button>
+                                   
+								<button type="button" class="btn btn-outline-secondary">VER EL LIBRO</button>
+								<p class="float-right">Comprado el 20-05-2019</p>		
                                 </div>
                                 <div class="col-md-2">
-                                    <div class="stars">
+									
+									<button type="button" class="btn btn-warning mt-3 " style="color: white;">Calificar Producto </button>
+									<br> <br>
+									<div class="stars">
                                         <form action="">
                                             <input class="star star-5" id="star-5" type="radio" name="star"/>
                                             <label class="star star-5" for="star-5"></label>
@@ -95,8 +100,47 @@ SECCIÓN PERFIL
                                 </div>
                             </div>
                          </div>
-                        <br>
-                    </div>
+						<br>
+						<div class="card mt-2">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img class="img-fluid" src="C:/Users/Lucia/Desktop/imagenes/KATYA2.jpg" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <h2 class="card-title mt-3 text-uppercase">UNDERGROUD</h2>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima assumenda nemo, autem fuga non, ullam recusandae earum nesciunt omnis vitae quod molestias id accusamus nobis dolor dolorum. Quas, error et!</p>
+                                   
+									<div class="btn-group" role="group" aria-label="Basic example">
+										<button type="button" class="btn btn-primary"> <i class="fas fa-check"></i> Despachado</button>
+										<button type="button" class="btn btn-info"><i class="fas fa-clock"></i> Enviado</button>
+										<button type="button" class="btn btn-success"><i class="fas fa-clock"></i> Entregado</button>
+									</div>
+								<p class="float-right">Comprado el 20-05-2019</p>		
+								<br>
+                                </div>
+                                <div class="col-md-2">
+									
+									<button type="button" class="btn btn-warning mt-3 " style="color: white;">Calificar Producto </button>
+									<br> <br>
+									<div class="stars">
+                                        <form action="">
+                                            <input class="star star-5" id="star-5" type="radio" name="star"/>
+                                            <label class="star star-5" for="star-5"></label>
+                                            <input class="star star-4" id="star-4" type="radio" name="star"/>
+                                            <label class="star star-4" for="star-4"></label>
+                                            <input class="star star-3" id="star-3" type="radio" name="star"/>
+                                            <label class="star star-3" for="star-3"></label>
+                                            <input class="star star-2" id="star-2" type="radio" name="star"/>
+                                            <label class="star star-2" for="star-2"></label>
+                                            <input class="star star-1" id="star-1" type="radio" name="star"/>
+                                            <label class="star star-1" for="star-1"></label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+					</div>
+					
 
 			        <!--=====================================
 			        PESTAÑA DESEOS
@@ -241,27 +285,51 @@ SECCIÓN PERFIL
 			        PESTAÑA PERFIL
 			        ======================================-->
 					<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                        <form>
-                        <div class="input-group flex-nowrap">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="addon-wrapping">@</span>
+						
+					<div class="card mt-3">
+						<!---->
+                            <div class="row">
+                                <div class="col-md-2 center-block">
+									<img class="img-fluid mt-5 " src="vistas/modulos/css/usuarios/40/944.jpg" alt="">
+									<button type="button" class="btn btn-secondary mt-5 ">Cambiar foto</button>
+								</div>
+
+								<div class="col-md-1"> </div> 
+						<!---->
+                    			<div class="col-md-8 float-right">
+										<form class="form-horizontal " role="form">
+											<fieldset>
+												<div class="input-group mt-5">
+													<span class="input-group-addon"><i class="fa fa-user"></i></span>
+													<input type="text" class="form-control ng-pristine ng-valid" placeholder="website url" ng-model="memberData.website">
+												</div>
+
+												<div class="input-group mt-5">
+													<span class="input-group-addon"><i class="fa fa-globe"></i></span>
+													<input type="text" class="form-control ng-pristine ng-valid" placeholder="website url" ng-model="memberData.website">
+												</div>
+
+												<div class="input-group mt-5">
+													<span class="input-group-addon"><i class="fa fa-globe"></i></span>
+													<input type="text" class="form-control ng-pristine ng-valid" placeholder="website url" ng-model="memberData.website">
+												</div>
+												<button type="button" class="btn btn-warning mt-5">Actualizar Datos</button>
+												<button type="button" class="btn btn-danger float-right mt-5">Eliminar Cuenta</button>
+											</fieldset>
+										</form>
+								</div>
+							<!---->
                             </div>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                        </div>
-                        </form>
-                            <div class="col-xs-5">
-                            <label for="ex3">col-xs-4</label>
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="addon-wrapping">@</span>
-                            </div>
-                            <input class="form-control" id="ex3" type="text">
-                        </div>
+                         </div>
+						
+						
                         
 					</div>
 					<!--=====================================
 			        PESTAÑA VER OFERTAS
 			        ======================================-->
 					<div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+						<br>
 						Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim
 						occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit
 						dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse
