@@ -1,67 +1,104 @@
 <!--=====================================
 SLIDESHOW  
 ======================================-->
-<br>
-<br>
 
-<img src="vistas/img/logo.png" alt="foto" class="col-sm-4 col-md-5 col-lg-2">
+<div class="container-fluid" id="slide">
+	
+	<div class="row">
+		
+		<!--=====================================
+		DIAPOSITIVAS
+		======================================-->
 
+		<ul>
 
-<div class="col-sm-10 col-md-10 col-lg-10">
+			<?php
 
-        <form class="form-inline">
-    
+				$servidor = Ruta::ctrRutaServidor();
 
-            <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Categorias
-              </button>
-            
-              <div class="form-group mx-sm-3 mb-2">
-                <label for="inputPassword2" class="sr-only">Password</label>
-                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-              </div>
-              <button type="submit" class="btn btn-warning mb-2">Buscar</button>
-            </form>
-          </p>
-          <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                    hola baby
-            </div>
-          </div>
+				$slide = ControladorSlide::ctrMostrarSlide();
+
+				foreach ($slide as $key => $value) {	
+
+					$estiloImgProducto = json_decode($value["estiloImgProducto"], true);
+					$estiloTextoSlide = json_decode($value["estiloTextoSlide"], true);
+					$titulo1 = json_decode($value["titulo1"], true);
+					$titulo2 = json_decode($value["titulo2"], true);
+					$titulo3 = json_decode($value["titulo3"], true);
+
+					echo '<li>
+				
+							<img src="'.$servidor.$value["imgFondo"].'">
+
+							<div class="slideOpciones '.$value["tipoSlide"].'">';
+
+							if($value["imgProducto"] != ""){
+								
+								echo '<img class="imgProducto" src="'.$servidor.$value["imgProducto"].'" style="top:'.$estiloImgProducto["top"].'; right:'.$estiloImgProducto["right"].'; width:'.$estiloImgProducto["width"].'; left:'.$estiloImgProducto["left"].'">';
+
+							}
+
+							echo '<div class="textosSlide" style="top:'.$estiloTextoSlide["top"].'; left:'.$estiloTextoSlide["left"].'; width:'.$estiloTextoSlide["width"].'; right:'.$estiloTextoSlide["right"].'">
+									
+									<h1 style="color:'.$titulo1["color"].'">'.$titulo1["texto"].'</h1>
+
+									<h2 style="color:'.$titulo2["color"].'">'.$titulo2["texto"].'</h2>
+
+									<h3 style="color:'.$titulo3["color"].'">'.$titulo3["texto"].'</h3>
+
+									<a href="'.$value["url"].'">
+										
+										'.$value["boton"].'
+
+									</a>
+
+								</div>	
+
+							</div>
+
+						</li>';
+
+				}
+
+			?>		
+
+		</ul>
+
+		<!--=====================================
+		PAGINACIÓN
+		======================================-->
+
+		<ol id="paginacion">
+
+			<?php
+
+				for($i = 1; $i <= count($slide); $i++){
+
+					echo '<li item="'.$i.'"><span class="fa fa-circle"></span></li>';
+
+				}		
+
+			?>
+
+		</ol>	
+
+		<!--=====================================
+		FLECHAS
+		======================================-->	
+
+		<div class="flechas" id="retroceder"><span class="fa fa-chevron-left"></span></div>
+		<div class="flechas" id="avanzar"><span class="fa fa-chevron-right"></span></div>
+
+	</div>
+
 </div>
-     
 
-<br>
-<br>
-<br>
-<div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel">
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="vistas/img/slide/slide1/back_default.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Primer slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#2196f3"></img>
-            </div>
-            <div class="carousel-item">
-                <img src="vistas/img/slide/slide3/cel.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Segundo slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#f50057"></rect></img>
-            </div>
-            <div class="carousel-item">
-                <img src="vistas/img/slide/slide4/fondo3.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Tercer slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#ff3d00"></rect></img>
-            </div>
-            </div>
-            
-            <!--Controles NEXT y PREV-->
-            <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-            <!--Controles de indicadores-->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel1" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel1" data-slide-to="1"></li>
-                <li data-target="#carousel1" data-slide-to="2"></li>
-            </ol>
-            
-        </div>
-      <br>
+<center>
+	
+	<button id="btnSlide" class="backColor">
+		
+			<i class="fa fa-angle-up"></i>
+
+	</button>
+
+</center>

@@ -1,95 +1,176 @@
-<!-- Footer -->
-<footer class="page-footer font-small   bg-dark pt-4">
+<!--=====================================
+FOOTER
+======================================-->
 
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left">
+<footer class="container-fluid">
 
-    <!-- Footer links -->
-    <div class="row text-center text-md-left mt-3 pb-3">
+	<div class="container">
 
-      <!-- Grid column -->
-      <div class="col-sm-2 col-md-2 col-lg-2">
-        <h6 class="text-uppercase mb-2 font-weight-bold">Company name</h6>
-        <p>Ropa para dama</p>
-        <p>Ropa para dama</p>
-      </div>
+		<div class="row">
 
-	  <div class="col-sm-2 col-md-2 col-lg-2">
-        <h6 class="text-uppercase mb-2 font-weight-bold">Products</h6>
-        <p>Ropa para dama</p>
-        <p>Ropa para dama</p>
-      </div>
+		 	<!--=====================================
+			CATEGORÍAS Y SUBCATEGORÍAS FOOTER
+			======================================-->
 
-		<div class="col-sm-2 col-md-2 col-lg-2">
-        <h6 class="text-uppercase mb-2 font-weight-bold">Products</h6>
-        <p>Ropa para dama</p>
-        <p>Ropa para dama</p>
-      </div>
+			<div class="col-lg-5 col-md-6 col-xs-12 footerCategorias">
 
-      <div class="col-sm-2 col-md-2 col-lg-2">
-        <h6 class="text-uppercase mb-2 font-weight-bold">Products</h6>
-        <p>Ropa para dama</p>
-        <p>Ropa para dama</p>
-      </div>
+			<?php
 
-     </div>
-    </div>
-      <!-- Grid column -->
+				$url = Ruta::ctrRuta();
 
+				$item = null;
+				$valor = null;
 
-       <div class="container text-center text-md-left">
+				$categorias = ControladorProductos::ctrMostrarCategorias($item, $valor);
 
-    <!-- Footer links -->
-    <div class="row text-center text-md-left mt-3 pb-3">
+				foreach ($categorias as $key => $value) {
 
-      <!-- Grid column -->
-      <div class="col-sm-2">
-        <h6 class="text-uppercase mb-2 font-weight-bold">Company name</h6>
-        <p>Ropa para dama</p>
-        <p>Ropa para dama</p>
-      </div>
+					echo '<div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
 
-	  <div class="col-sm-2">
-        <h6 class="text-uppercase mb-2 font-weight-bold">Products</h6>
-        <p>Ropa para dama</p>
-        <p>Ropa para dama</p>
-      </div>
+						<h4><a href="'.$url.$value["ruta"].'" class="pixelCategorias" titulo="'.$value["categoria"].'">'.$value["categoria"].'</a></h4>
 
-		<div class="col-sm-2">
-        
-      </div>
-      	<div class="col-sm-6">
-      
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123527.53669855763!2d-90.64975178247533!3d14.642567721222825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a03c010b8a81%3A0x51ca7679b78b66b6!2sMixco!5e0!3m2!1ses!2sgt!4v1589506017238!5m2!1ses!2sgt" width="200" height="180" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-      
-     </div>
-     </div>
-    </div>
+						<hr>
 
-      
-      <!-- Grid column --    - Grid column -->
+						<ul>';
 
+						$item = "id_categoria";
 
-    <div class="row d-flex align-items-center">
+						$valor = $value["id"];
 
-  
-      <div class="col-md-7 col-lg-12">
+						$subcategorias = ControladorProductos::ctrMostrarSubCategorias($item, $valor);
+						
+						foreach ($subcategorias as $key => $value) {
+						
+							echo '<li><a href="'.$url.$value["ruta"].'" class="pixelSubCategorias" titulo="'.$value["subcategoria"].'">'.$value["subcategoria"].'</a></li>';
 
-        <!--Copyright-->
-        <p class="text-center text-md-center">© 2020 Copyright:
-          <a href="https://mdbootstrap.com/">
-            <strong>Todos los derechos reservados.Sitio Elaborado por la Compañia Dismas.</strong>
-          </a>
-        </p>
+						}
 
-      </div>
-      <!-- Grid column -->
+						echo '</ul>
 
-    </div>
-    <!-- Grid row -->
+					</div>';
 
-  </div>
-  <!-- Footer Links -->
+				}
+
+			?>
+
+			</div>
+
+			<!--=====================================
+			DATOS CONTACTO
+			======================================-->
+
+			<div class="col-md-3 col-sm-6 col-xs-12 text-left infoContacto">
+				
+				<h5>Dudas e inquietudes, contáctenos en:</h5>
+
+				<br>
+				
+				<h5>
+					
+					<i class="fa fa-phone-square" aria-hidden="true"></i> (555) 555-55-55
+
+					<br><br>
+
+					<i class="fa fa-envelope" aria-hidden="true"></i> soporte@tiendavirtual.com
+
+					<br><br>
+
+					<i class="fa fa-map-marker" aria-hidden="true"></i> Plaza del Sol Local 102
+
+					<br><br>
+					Zona 9 | Cdad. de Guatemala
+
+				</h5>
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1930.4780547752043!2d-90.52403750499494!3d14.601576151843007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a3d7c6e2d29f%3A0xeb4b450d17a87024!2sPlaza%20del%20Sol!5e0!3m2!1ses!2sgt!4v1590169041816!5m2!1ses!2sgt" width="250" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>	
+
+			</div>
+
+			<!--=====================================
+			FORMULARIO CONTÁCTENOS
+			======================================-->
+
+			<div class="col-lg-4 col-md-3 col-sm-6 col-xs-12 formContacto">
+				
+				<h4>RESUELVA SU INQUIETUD</h4>
+
+				<form role="form" method="post" onsubmit="return validarContactenos()">
+
+			  		<input type="text" id="nombreContactenos" name="nombreContactenos" class="form-control" placeholder="Escriba su nombre" required> 
+
+			   		<br>
+	    	      
+   					<input type="email" id="emailContactenos" name="emailContactenos" class="	form-control" placeholder="Escriba su correo electrónico" required>  
+
+   					<br>
+	    		     	          
+	       			<textarea id="mensajeContactenos" name="mensajeContactenos" class="form-control" placeholder="Escriba su mensaje" rows="5" required></textarea>
+
+	       			<br>
+	    	
+	       			<input type="submit" value="Enviar" class="btn btn-default backColor pull-right" id="enviar">         
+
+				</form>
+
+				<?php 
+
+					$contactenos = new ControladorUsuarios();
+					$contactenos -> ctrFormularioContactenos();
+
+				?>
+
+			</div>
+			
+		</div>
+
+	</div>
 
 </footer>
-<!-- Footer -->
+
+
+<!--=====================================
+FINAL
+======================================-->
+
+<div class="container-fluid final">
+	
+	<div class="container">
+	
+		<div class="row">
+			
+			<div class="col-sm-6 col-xs-12 text-left text-muted">
+				
+				<h5>&copy; 2020 Todos los derechos reservados. Sitio elaborado por la Compañía Dismas</h5>
+
+			</div>
+
+			<div class="col-sm-6 col-xs-12 text-right social">
+				
+			<ul>
+
+			<?php
+				
+			$social = ControladorPlantilla::ctrEstiloPlantilla();
+
+				$jsonRedesSociales = json_decode($social["redesSociales"],true);		
+
+				foreach ($jsonRedesSociales as $key => $value) {
+
+					echo '<li>
+							<a href="'.$value["url"].'" target="_blank">
+								<i class="fa '.$value["red"].' redSocial '.$value["estilo"].'" aria-hidden="true"></i>
+							</a>
+						</li>';
+				}
+
+			?>
+
+			</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

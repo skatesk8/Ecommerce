@@ -1,14 +1,32 @@
-<!--BOOTSTRAP-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="vistas/css/carrito.css">
-
-    <!--JS-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<?php
     
+    $url = Ruta::ctrRuta();
+
+ ?>
+
+<!--=====================================
+BREADCRUMB CARRITO DE COMPRAS
+======================================-->
+
+<div class="container-fluid well well-sm">
+	
+	<div class="container">
+		
+		<div class="row">
+			
+			<ul class="breadcrumb fondoBreadcrumb text-uppercase">
+				
+				<li><a href="<?php echo $url;  ?>">CARRITO DE COMPRAS</a></li>
+				<li class="active pagActiva"><?php echo $rutas[0] ?></li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+</div>
+
 <!--=====================================
 TABLA CARRITO DE COMPRAS
 ======================================-->
@@ -16,207 +34,300 @@ TABLA CARRITO DE COMPRAS
 <div class="container-fluid">
 
 	<div class="container">
-			
-			<h1>Carrito</h1>
 
+		<div class="panel panel-default">
+			
 			<!--=====================================
 			CABECERA CARRITO DE COMPRAS
 			======================================-->
+
+			<div class="panel-heading cabeceraCarrito">
+				
+				<div class="col-md-6 col-sm-7 col-xs-12 text-center">
+					
+					<h3>
+						<small>PRODUCTO</small>
+					</h3>
+
+				</div>
+
+				<div class="col-md-2 col-sm-1 col-xs-0 text-center">
+					
+					<h3>
+						<small>PRECIO</small>
+					</h3>
+
+				</div>
+
+				<div class="col-sm-2 col-xs-0 text-center">
+					
+					<h3>
+						<small>CANTIDAD</small>
+					</h3>
+
+				</div>
+
+				<div class="col-sm-2 col-xs-0 text-center">
+					
+					<h3>
+						<small>SUBTOTAL</small>
+					</h3>
+
+				</div>
+
+			</div>
 
 			<!--=====================================
 			CUERPO CARRITO DE COMPRAS
 			======================================-->
 
-                 
-        <div id="loginbox" style="margin-top:20px;" class="mainbox col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2">
-            <!--_________________CARD______________-->
-            <div class="card text-center center-block">
-                <div class="card-header">Carrito de Compras</div>
-                <!--_________________Cuerpa :V______________-->
-                <div class="card-body mb-3">
-                    <!--_________________Tabla______________-->
-                    <table class="table">
-                        <thead>
-                            <TR>
-                                <th scope="col">Eliminar </th>
-                                <th scope="col">Imagen </th>
-                                <th scope="col">PRODUCTO</th>
-                                <th scope="col">PRECIO</th>
-                                <th scope="col">CANTIDAD</th>
-                                <th scope="col">SUBTOTAL</th>
-                            </TR>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <!--________________Boton de eliminar______________-->
-                                <td><button class="btn btn-warning glyphicon glyphicon-remove"></button></td>
-                                <!--________________Imagen______________-->
-                                <td><img width="100px" heigth="50px" src="z.png"></td>
-                                <!--________________Nombre del producto_____________-->
-                                <td>Zapatos Chingones</td>
-                                <!--_________________Precio______________-->
-                                <td>150</td>
-                                <!--_________________Cantidad______________-->
-                                <td>
-                                    <input type="number" value="1" min="1" max="100" class="form-control"/>
-                                </td>
-                                <!--_________________Subtotal______________-->
-                                <td>150</td>
-                            </tr>
-                            <tr>
-                                <!--________________Boton de eliminar______________-->
-                                <td><button class="btn btn-warning glyphicon glyphicon-remove"></button></td>
-                                <!--________________Imagen______________-->
-                                <td><img width="100px" heigth="50px" src="vistas/img/productos/accesorios/calzado05.jpg"></td>
-                                <!--________________Nombre del producto_____________-->
-                                <td>Zapatos Chingones</td>
-                                <!--_________________Precio______________-->
-                                <td>150</td>
-                                <!--_________________Cantidad______________-->
-                                <td>
-                                    <input type="number" value="1" min="1" max="100" class="form-control"/>
-                                </td>
-                                <!--_________________Subtotal______________-->
-                                <td>150</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--_________________TABLA DE TOTAL ______________-->
-                    <table class="table table-hover w-25 float-right">
-                        <thead class="text-right">
-                            <tr>
-                                <th>Total</th>
-                                <th>150</th>
-                            </tr>
-                        </thead>
-                    </table>
-                    <br><br></br>
-
-
-                </div>
-                <div class="card-footer text-muted">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-warning btn-xl js-scroll-trigger" data-toggle="modal"
-                        data-target="#exampleModalLong">
-                        REALIZAR PAGO
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+			<div class="panel-body cuerpoCarrito">
 
 				
+
+			</div>
 
 			<!--=====================================
 			SUMA DEL TOTAL DE PRODUCTOS
 			======================================-->
 
-			
+			<div class="panel-body sumaCarrito">
+
+				<div class="col-md-4 col-sm-6 col-xs-12 pull-right well">
+					
+					<div class="col-xs-6">
+						
+						<h4>TOTAL:</h4>
+
+					</div>
+
+					<div class="col-xs-6">
+
+						<h4 class="sumaSubTotal">
+							
+							
+
+						</h4>
+
+					</div> 
+
+				</div>
+
+			</div>
+
 			<!--=====================================
 			BOTÓN CHECKOUT
 			======================================-->
-			<!-- Button trigger modal -->
-			
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="panel panel-warning">
-                        <!--_________________Titulo______________-->
-                        <div class="panel-heading">
-                            <div class="panel-title text-center">Realizar Pago</div>
-                        </div>
-                        <br>
-                        <!--_________________Titulo elejir la forma de pago ______________-->
-                        <div class="alert alert-secondary col-10 text-center center-block" role="alert">
-                            Elejir la forma de pago
-                        </div>
-                        <!--________________RADIOBUTTONS____________-->
-                        <div class="d-flex justify-content-center">
-                            <label class="rad col-md-4">
-                                <input type="radio" name="rad1" value="a">
-                                <i></i>
-                            </label>
-                            <label class="rad">
-                                <input type="radio" name="rad1" value="b" checked>
-                                <i></i>
-                            </label>
-                        </div>
-                        <!--_________________Imagenes______________-->
-                        <div class="d-flex justify-content-center">
-                            <img src="vistas/img/plantilla/paypal.png" class="rounded float-left w-50 col-md-4" alt="...">
-                            <img src="vistas/img/plantilla/ima1.png" class="rounded float-right w-50 col-md-4" alt="...">
-                        </div>
-                        <!--_________________Titulo elejir la forma de pago ______________-->
-                        <br>
-                        <div class="alert alert-secondary col-10 text-center center-block" role="alert">
-                            Productos a Comprar
-                        </div>
-                        <!--_________________TABLA DE PRODUCTOS ______________-->
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Producto</th>
-                                    <th>Cantidad</th>
-                                    <th>Precio</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>John</td>
-                                    <td>Doe</td>
-                                    <td>john@example.com</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <br>
-                        <!--_________________TABLA DE TOTAL ______________-->
-                        <table class="table table-hover w-50 float-right" style="margin-bottom: 30px;">
-                            <thead>
-                                <tr>
-                                    <td>Subtotal</td>
-                                    <td>150</td>
-                                </tr>
-                                <tr>
-                                    <td>Envio</td>
-                                    <td>150</td>
+			<div class="panel-heading cabeceraCheckout">
 
-                                </tr>
-                                <tr>
-                                    <td>Impuestos</td>
-                                    <td>150</td>
+			<?php
 
-                                </tr>
-                                <tr>
-                                    <th>Total</th>
-                                    <th>150</th>
-                                </tr>
-                            </thead>
-                        </table>
-                        <br>
-                        <!--_________________Lista ______________-->
-                        <div class="form-group col-md-4">
-                            <select id="inputState" class="form-control">
-                                <option selected>USD</option>
-                                <option>Q</option>
-                                <option>MXN</option>
-                            </select>
-                        </div>
-                        <!--_________________BOTON DE PAGAR ______________-->
-                        <button class="btn btn-warning col-10 text-center center-block">Pagar</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
+				if(isset($_SESSION["validarSesion"])){
 
-                </div>
-            </div>
-        </div>
+					if($_SESSION["validarSesion"] == "ok"){
+
+						echo '<a id="btnCheckout" href="#modalCheckout" data-toggle="modal" idUsuario="'.$_SESSION["id"].'"><button class="btn btn-default backColor btn-lg pull-right">REALIZAR PAGO</button></a>';
+
+					}
+
+
+				}else{
+
+					echo '<a href="#modalIngreso" data-toggle="modal"><button class="btn btn-default backColor btn-lg pull-right">REALIZAR PAGO</button></a>';
+				}
+
+			?>	
+
+			</div>
+
+		</div>
+
 	</div>
+
+</div>
+
+<!--=====================================
+VENTANA MODAL PARA CHECKOUT
+======================================-->
+
+<div id="modalCheckout" class="modal fade modalFormulario" role="dialog">
+	
+	 <div class="modal-content modal-dialog">
+	 	
+		<div class="modal-body modalTitulo">
+			
+			<h3 class="backColor">REALIZAR PAGO</h3>
+
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+			<div class="contenidoCheckout">
+
+				<?php
+
+				$respuesta = ControladorCarrito::ctrMostrarTarifas();
+
+				echo '<input type="hidden" id="tasaImpuesto" value="'.$respuesta["impuesto"].'">
+					  <input type="hidden" id="envioNacional" value="'.$respuesta["envioNacional"].'">
+				      <input type="hidden" id="envioInternacional" value="'.$respuesta["envioInternacional"].'">
+				      <input type="hidden" id="tasaMinimaNal" value="'.$respuesta["tasaMinimaNal"].'">
+				      <input type="hidden" id="tasaMinimaInt" value="'.$respuesta["tasaMinimaInt"].'">
+				      <input type="hidden" id="tasaPais" value="'.$respuesta["pais"].'">
+
+				';
+
+				?>
+				
+				<div class="formEnvio row">
+					
+					<h4 class="text-center well text-muted text-uppercase">Información de envío</h4>
+
+					<div class="col-xs-12 seleccionePais">
+						
+						
+
+					</div>
+
+				</div>
+
+				<br>
+
+				<div class="formaPago row">
+					
+					<h4 class="text-center well text-muted text-uppercase">Elige la forma de pago</h4>
+
+					<figure class="col-xs-6">
+						
+						<center>
+							
+							<input id="checkPaypal" type="radio" name="pago" value="paypal" checked>
+
+						</center>	
+						
+						<img src="<?php echo $url; ?>vistas/img/plantilla/paypal.jpg" class="img-thumbnail">		
+
+					</figure>
+
+					<figure class="col-xs-6">
+						
+						<center>
+							
+							<input id="checkPayu" type="radio" name="pago" value="payu">
+
+						</center>
+
+						<img src="<?php echo $url; ?>vistas/img/plantilla/payu.jpg" class="img-thumbnail">
+
+					</figure>
+
+				</div>
+
+				<br>
+
+				<div class="listaProductos row">
+					
+					<h4 class="text-center well text-muted text-uppercase">Productos a comprar</h4>
+
+					<table class="table table-striped tablaProductos">
+						
+						 <thead>
+						 	
+							<tr>		
+								<th>Producto</th>
+								<th>Cantidad</th>
+								<th>Precio</th>
+							</tr>
+
+						 </thead>
+
+						 <tbody>
+						 	
+
+
+						 </tbody>
+
+					</table>
+
+					<div class="col-sm-6 col-xs-12 pull-right">
+						
+						<table class="table table-striped tablaTasas">
+							
+							<tbody>
+								
+								<tr>
+									<td>Subtotal</td>	
+									<td><span class="cambioDivisa">USD</span> $<span class="valorSubtotal" valor="0">0</span></td>	
+								</tr>
+
+								<tr>
+									<td>Envío</td>	
+									<td><span class="cambioDivisa">USD</span> $<span class="valorTotalEnvio" valor="0">0</span></td>	
+								</tr>
+
+								<tr>
+									<td>Impuesto</td>	
+									<td><span class="cambioDivisa">USD</span> $<span class="valorTotalImpuesto" valor="0">0</span></td>	
+								</tr>
+
+								<tr>
+									<td><strong>Total</strong></td>	
+									<td><strong><span class="cambioDivisa">USD</span> $<span class="valorTotalCompra" valor="0">0</span></strong></td>	
+								</tr>
+
+							</tbody>	
+
+						</table>
+
+						 <div class="divisa">
+
+						 	<select class="form-control" id="cambiarDivisa" name="divisa">
+						 		
+							
+
+						 	</select>	
+
+						 	<br>
+
+						 </div>
+
+					</div>
+
+					<div class="clearfix"></div>
+
+					<form class="formPayu" style="display:none">
+					 
+						<input name="merchantId" type="hidden" value=""/>
+						<input name="accountId" type="hidden" value=""/>
+						<input name="description" type="hidden" value=""/>
+						<input name="referenceCode" type="hidden" value=""/>	
+						<input name="amount" type="hidden" value=""/>
+						<input name="tax" type="hidden" value=""/>
+						<input name="taxReturnBase" type="hidden" value=""/>
+						<input name="shipmentValue" type="hidden" value=""/>
+						<input name="currency" type="hidden" value=""/>
+						<input name="lng" type="hidden" value="es"/>
+						<input name="confirmationUrl" type="hidden" value="" />
+						<input name="responseUrl" type="hidden" value=""/>
+						<input name="declinedResponseUrl" type="hidden" value=""/>
+						<input name="displayShippingInformation" type="hidden" value=""/>
+						<input name="test" type="hidden" value="" />
+						<input name="signature" type="hidden" value=""/>
+
+					  <input name="Submit" class="btn btn-block btn-lg btn-default backColor" type="submit"  value="PAGAR" >
+					</form>
+					
+					<button class="btn btn-block btn-lg btn-default backColor btnPagar">PAGAR</button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="modal-footer">
+      	
+      	</div>
+
+	</div>
+
 </div>
