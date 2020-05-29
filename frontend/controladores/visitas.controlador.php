@@ -96,7 +96,7 @@ class ControladorVisitas{
 	MOSTRAR EL TOTAL DE VISITAS
 	=============================================*/	
 
-	public function ctrMostrarTotalVisitas(){
+	static public function ctrMostrarTotalVisitas(){
 
 		$tabla = "visitaspaises";
 
@@ -110,7 +110,7 @@ class ControladorVisitas{
 	MOSTRAR LOS PRIMEROS 6 PAISES DE VISITAS
 	=============================================*/
 	
-	public function ctrMostrarPaises(){
+	static public function ctrMostrarPaises(){
 
 		$tabla = "visitaspaises";
 	
