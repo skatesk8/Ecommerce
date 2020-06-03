@@ -965,7 +965,7 @@ class ControladorUsuarios{
 
 	}
 	/*=============================================
-	FORMULARIO CONTACTENOS
+	FORMULARIO CONTACTENOSs
 	=============================================*/
 
 	public function ctrFormularioContactenos(){
