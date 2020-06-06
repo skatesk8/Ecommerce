@@ -38,14 +38,7 @@ class ControladorUsuarios{
 /*=============================================
 					ACTUALIZAR NOTIFICACIONES NUEVOS USUARIOS
 					=============================================*/
-
-					$traerNotificaciones = ControladorNotificaciones::ctrMostrarNotificaciones();
-
-					$nuevoUsuario = $traerNotificaciones["nuevosUsuarios"] + 1;
-
-					ModeloNotificaciones::mdlActualizarNotificaciones("notificaciones", "nuevosUsuarios", $nuevoUsuario);
-
-					date_default_timezone_set("America/Bogota");
+date_default_timezone_set("America/Bogota");
 
 					$url = Ruta::ctrRuta();	
 
@@ -175,7 +168,6 @@ class ControladorUsuarios{
 		}
 
 	}
-
 	/*=============================================
 	MOSTRAR USUARIO
 	=============================================*/
@@ -277,7 +269,7 @@ class ControladorUsuarios{
 
 							function(isConfirm){
 									 if (isConfirm) {	   
-									  history.back();
+									    window.location = localStorage.getItem("rutaActual");
 									  } 
 							});
 
@@ -311,7 +303,6 @@ class ControladorUsuarios{
 		}
 
 	}
-
 	/*=============================================
 	OLVIDO DE CONTRASEÑA
 	=============================================*/
@@ -989,7 +980,7 @@ class ControladorUsuarios{
 				ENVÍO CORREO ELECTRÓNICO
 				=============================================*/
 
-					date_default_timezone_set("America/Bogota");
+					date_default_timezone_set("America/Guatemala");
 
 					$url = Ruta::ctrRuta();	
 
