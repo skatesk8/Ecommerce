@@ -590,7 +590,12 @@ VENTANA MODAL PARA OLVIDO DE CONTRASEÑA
 						<input type="email" class="form-control" id="passEmail" name="passEmail" placeholder="Correo Electrónico" required>
 
 					</div>
+	<?php
 
+					$password = new ControladorUsuarios();
+					$password -> ctrOlvidoPassword();
+
+				?>
 				</div>			
 				<input type="submit" class="btn btn-default backColor btn-block" value="ENVIAR">	
 
