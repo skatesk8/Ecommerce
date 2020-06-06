@@ -470,6 +470,7 @@ $(".quitarDeseo").click(function(){
 ELIMINAR USUARIO
 =============================================*/
 
+
 $("#eliminarUsuario").click(function(){
 
 	var id = $("#idUsuario").val();
@@ -500,6 +501,8 @@ $("#eliminarUsuario").click(function(){
 		});
 
 })
+
+
 
 
 /*=============================================
