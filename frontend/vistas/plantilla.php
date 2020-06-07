@@ -283,7 +283,7 @@ include "modulos/footer.php";
 <!--=====================================
 JAVASCRIPT PERSONALIZADO
 ======================================-->
-
+<script src="<?php echo $url; ?>vistas/js/usuarios.js"></script>
 <script src="<?php echo $url; ?>vistas/js/cabezote.js"></script>
 <script src="<?php echo $url; ?>vistas/js/plantilla.js"></script>
 <script src="<?php echo $url; ?>vistas/js/slide.js"></script>
