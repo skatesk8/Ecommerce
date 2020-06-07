@@ -6,9 +6,9 @@ class Ruta{
 	RUTA LADO DEL CLIENTE
 	=============================================*/	
 
-	 static public function ctrRuta(){
+	public function ctrRuta(){
 
-		return "http://localhost:8081/Ecommerce/frontend/";
+		return "http://localhost:8081/E/frontend/";
 	
 	}
 
@@ -16,9 +16,9 @@ class Ruta{
 	RUTA LADO DEL SERVIDOR
 	=============================================*/	
 
-	 static public function ctrRutaServidor(){
+	public function ctrRutaServidor(){
 
-		return "http://localhost:8081/Ecommerce/backend/";
+		return "http://localhost:8081/E/backend/";
 	
 	}
 
