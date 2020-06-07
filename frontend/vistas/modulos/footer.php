@@ -58,8 +58,7 @@ FOOTER
 			<!--=====================================
 			DATOS CONTACTO
 			======================================-->
-
-			<div class="col-md-3 col-sm-6 col-xs-12 text-left infoContacto">
+<div class="col-md-3 col-sm-6 col-xs-12 text-left infoContacto">
 				
 				<h5>Dudas e inquietudes, contáctenos en:</h5>
 

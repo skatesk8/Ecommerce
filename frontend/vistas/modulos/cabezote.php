@@ -2,6 +2,7 @@
 
 $servidor = Ruta::ctrRutaServidor();
 $url = Ruta::ctrRuta();
+
 /*=============================================
 INICIO DE SESIÓN USUARIO
 =============================================*/
@@ -20,6 +21,71 @@ if(isset($_SESSION["validarSesion"])){
 
 }
 
+/*=============================================
+API DE GOOGLE
+=============================================*/
+
+// https://console.developers.google.com/apis
+// https://github.com/google/google-api-php-client
+
+/*=============================================
+CREAR EL OBJETO DE LA API GOOGLE
+=============================================*/
+
+$cliente = new Google_Client();
+$cliente->setAuthConfig('modelos/client_secret.json');
+$cliente->setAccessType("offline");
+$cliente->setScopes(['profile','email']);
+
+/*=============================================
+RUTA PARA EL LOGIN DE GOOGLE
+=============================================*/
+
+$rutaGoogle = $cliente->createAuthUrl();
+
+/*=============================================
+RECIBIMOS LA VARIABLE GET DE GOOGLE LLAMADA CODE
+=============================================*/
+
+if(isset($_GET["code"])){
+
+	$token = $cliente->authenticate($_GET["code"]);
+
+	$_SESSION['id_token_google'] = $token;
+
+	$cliente->setAccessToken($token);
+
+}
+
+/*=============================================
+RECIBIMOS LOS DATOS CIFRADOS DE GOOGLE EN UN ARRAY
+=============================================*/
+
+if($cliente->getAccessToken()){
+
+ 	$item = $cliente->verifyIdToken();
+
+ 	$datos = array("nombre"=>$item["name"],
+				   "email"=>$item["email"],
+				   "foto"=>$item["picture"],
+				   "password"=>"null",
+				   "modo"=>"google",
+				   "verificacion"=>0,
+				   "emailEncriptado"=>"null");
+
+ 	$respuesta = ControladorUsuarios::ctrRegistroRedesSociales($datos);
+
+ 	echo '<script>
+		
+	setTimeout(function(){
+
+		window.location = localStorage.getItem("rutaActual");
+
+	},1000);
+
+ 	</script>';
+
+}
 
 ?>
 
@@ -67,7 +133,8 @@ TOP
 			======================================-->
 
 			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 registro">
-			<ul>
+				
+				<ul>
 
 				<?php
 
@@ -144,6 +211,7 @@ TOP
 				?>
 	
 				</ul>
+
 			</div>	
 
 		</div>	
@@ -409,20 +477,21 @@ VENTANA MODAL PARA EL REGISTRO
 
 								<br>
 
-								<!-- <a href="//www.iubenda.com/privacy-policy/8146355" class="iubenda-white iubenda-embed" title="condiciones de uso y políticas de privacidad">Leer más</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> -->
+								<a href="//www.iubenda.com/privacy-policy/8146355" class="iubenda-white iubenda-embed" title="condiciones de uso y políticas de privacidad">Leer más</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 
 							</small>
 
 					</label>
 
 				</div>
-				
+
 				<?php
 
 					$registro = new ControladorUsuarios();
 					$registro -> ctrRegistroUsuario();
 
 				?>
+				
 				<input type="submit" class="btn btn-default backColor btn-block" value="ENVIAR">	
 
 			</form>
@@ -521,14 +590,15 @@ VENTANA MODAL PARA EL INGRESO
 					</div>
 
 				</div>
+
 				
+
 				<?php
 
 					$ingreso = new ControladorUsuarios();
 					$ingreso -> ctrIngresoUsuario();
 
 				?>
-				
 				
 				<input type="submit" class="btn btn-default backColor btn-block btnIngreso" value="ENVIAR">	
 
@@ -590,13 +660,16 @@ VENTANA MODAL PARA OLVIDO DE CONTRASEÑA
 						<input type="email" class="form-control" id="passEmail" name="passEmail" placeholder="Correo Electrónico" required>
 
 					</div>
-	<?php
+
+				</div>			
+
+				<?php
 
 					$password = new ControladorUsuarios();
 					$password -> ctrOlvidoPassword();
 
 				?>
-				</div>			
+				
 				<input type="submit" class="btn btn-default backColor btn-block" value="ENVIAR">	
 
 			</form>

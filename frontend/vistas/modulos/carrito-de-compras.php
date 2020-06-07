@@ -83,41 +83,7 @@ TABLA CARRITO DE COMPRAS
 
 			<div class="panel-body cuerpoCarrito">
 
-				<div class="row itemcarrito">	
-					<br>
-					<center>
-						<button class="btn btn-default backcolor">
-							<i class="fa fa-items"></i>
-						</button>
-					</center>
-				</div>
-
-				<div class="col-sm-1 col-xs-12">
-					<figure>
-						<img src="http://localhost/backend/vistas/img/productos/libros/libro01.jpg" class="img-thumbnail">
-					</figure>
-				</div>
-
-				<div class="col-sm-4 col-xs-12">
-					<figure>
-						<p class="tituloCarritoCompra text-left">Alisia en el espejo</p>
-					</figure>
-				</div>
-
-				<div class="col-md-2 col-sm-1 col-xs-12">
-					<figure>
-						<p class="precioCarritoCompra text-center">USD $ <span>10</span></p>
-					</figure>
-				</div>
-
-				<div class="col-md-2 col-sm-3 col-xs-8">
-					<br>
-					<center>
-						<div class="col-xs-8">
-							<input type="number" class="form-control" min="1" value="1" readonly>
-						</div>
-					</center>
-				</div>
+				
 
 			</div>
 

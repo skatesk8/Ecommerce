@@ -6,7 +6,7 @@ class ControladorUsuarios{
 	REGISTRO DE USUARIO
 	=============================================*/
 
-  public function ctrRegistroUsuario(){
+	public function ctrRegistroUsuario(){
 
 		if(isset($_POST["regUsuario"])){
 
@@ -14,7 +14,8 @@ class ControladorUsuarios{
 			   preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["regEmail"]) &&
 			   preg_match('/^[a-zA-Z0-9]+$/', $_POST["regPassword"])){
 
-			   	$encriptar = crypt($_POST["regPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
+			   	$encriptar = crypt($_POST["regPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$
+			   		$2a$07$asxx54ahjppf45sd87a5auxq/SS293XhTEeizKWMnfhnpfay0AALe');
 
 			   	$encriptarEmail = md5($_POST["regEmail"]);
 
@@ -35,10 +36,8 @@ class ControladorUsuarios{
 					/*=============================================
 					VERIFICACIÓN CORREO ELECTRÓNICO
 					=============================================*/
-/*=============================================
-					ACTUALIZAR NOTIFICACIONES NUEVOS USUARIOS
-					=============================================*/
-date_default_timezone_set("America/Bogota");
+
+					date_default_timezone_set("America/Bogota");
 
 					$url = Ruta::ctrRuta();	
 
@@ -60,7 +59,7 @@ date_default_timezone_set("America/Bogota");
 						
 						<center>
 							
-							<img style="padding:20px; width:10%" src="http://tutorialesatualcance.com/tienda/logo.png">
+							<img style="padding:20px; width:10%" src="http://www.tutorialesatualcance.com/tienda/logo.png">
 
 						</center>
 
@@ -68,7 +67,7 @@ date_default_timezone_set("America/Bogota");
 						
 							<center>
 							
-							<img style="padding:20px; width:15%" src="http://tutorialesatualcance.com/tienda/icon-email.png">
+							<img style="padding:20px; width:15%" src="http://www.tutorialesatualcance.com/tienda/icon-email.png">
 
 							<h3 style="font-weight:100; color:#999">VERIFIQUE SU DIRECCIÓN DE CORREO ELECTRÓNICO</h3>
 
@@ -168,6 +167,7 @@ date_default_timezone_set("America/Bogota");
 		}
 
 	}
+
 	/*=============================================
 	MOSTRAR USUARIO
 	=============================================*/
@@ -303,6 +303,7 @@ date_default_timezone_set("America/Bogota");
 		}
 
 	}
+
 	/*=============================================
 	OLVIDO DE CONTRASEÑA
 	=============================================*/
@@ -381,7 +382,7 @@ date_default_timezone_set("America/Bogota");
 	
 								<center>
 									
-									<img style="padding:20px; width:10%" src="http://tutorialesatualcance.com/tienda/logo.png">
+									<img style="padding:20px; width:10%" src="http://www.tutorialesatualcance.com/tienda/logo.png">
 
 								</center>
 
@@ -389,7 +390,7 @@ date_default_timezone_set("America/Bogota");
 								
 									<center>
 									
-									<img style="padding:20px; width:15%" src="http://tutorialesatualcance.com/tienda/icon-pass.png">
+									<img style="padding:20px; width:15%" src="http://www.tutorialesatualcance.com/tienda/icon-pass.png">
 
 									<h3 style="font-weight:100; color:#999">SOLICITUD DE NUEVA CONTRASEÑA</h3>
 
@@ -641,7 +642,7 @@ date_default_timezone_set("America/Bogota");
 				list($ancho, $alto) = getimagesize($_FILES["datosImagen"]["tmp_name"]);
 
 				$nuevoAncho = 500;
-				$nuevoAlto = 500;
+				$nuevoAlto = 500;	
 
 				$aleatorio = mt_rand(100, 999);
 
@@ -652,7 +653,6 @@ date_default_timezone_set("America/Bogota");
 					/*=============================================
 					MOFICAMOS TAMAÑO DE LA FOTO
 					=============================================*/
-
 
 					$origen = imagecreatefromjpeg($_FILES["datosImagen"]["tmp_name"]);
 
@@ -698,14 +698,11 @@ date_default_timezone_set("America/Bogota");
 
 			}
 
-			
-
 			$datos = array("nombre" => $_POST["editarNombre"],
 						   "email" => $_POST["editarEmail"],
 						   "password" => $password,
 						   "foto" => $ruta,
 						   "id" => $_POST["idUsuario"]);
-
 
 			$tabla = "usuarios";
 
@@ -746,6 +743,7 @@ date_default_timezone_set("America/Bogota");
 		}
 
 	}
+
 
 	/*=============================================
 	MOSTRAR COMPRAS
@@ -964,6 +962,7 @@ date_default_timezone_set("America/Bogota");
 		}
 
 	}
+
 	/*=============================================
 	FORMULARIO CONTACTENOS
 	=============================================*/
@@ -980,7 +979,7 @@ date_default_timezone_set("America/Bogota");
 				ENVÍO CORREO ELECTRÓNICO
 				=============================================*/
 
-					date_default_timezone_set("America/Guatemala");
+					date_default_timezone_set("America/Bogota");
 
 					$url = Ruta::ctrRuta();	
 
@@ -1101,6 +1100,4 @@ date_default_timezone_set("America/Bogota");
 
 	}
 
-
 }
-	
