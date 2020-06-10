@@ -748,7 +748,7 @@ INFOPRODUCTOS
 			foreach ($comentarios as $key => $value){
 				
 				if($value["comentario"] != ""){
-
+                                   error_reporting(0);
 					$cantidad += count($value["id"]);
 
 				}
