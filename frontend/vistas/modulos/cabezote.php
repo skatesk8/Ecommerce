@@ -22,7 +22,7 @@ if(isset($_SESSION["validarSesion"])){
 }
 
 /*=============================================
-API DE GOOGLE
+API DE GOOGLE falta porfa completarlo
 =============================================*/
 
 // https://console.developers.google.com/apis
